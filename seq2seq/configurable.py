@@ -59,7 +59,7 @@ def _maybe_load_yaml(item):
   it is returned as-is.
   """
   if isinstance(item, six.string_types):
-    return yaml.load(item)
+    return yaml.safe_load(item)
   elif isinstance(item, dict):
     return item
   else:
